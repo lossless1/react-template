@@ -1,0 +1,33 @@
+/*
+  Customize input placeholder
+  Usage:
+  @include placeholder {
+    color: red;
+  }
+ */
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin centralize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin ellipse-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
