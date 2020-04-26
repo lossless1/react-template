@@ -4,7 +4,11 @@
     "plugin:react/recommended",
     "plugin:prettier/recommended"
   ],
-  "plugins": ["react", "prettier", "import"],
+  "plugins": [
+    "react",
+    "prettier",
+    "import"
+  ],
   "env": {
     "browser": true,
     "es6": true,
@@ -12,6 +16,7 @@
   },
   "rules": {
     "validateLineBreaks": 0,
+    "no-debugger": 0,
     "prettier/prettier": [
       "error",
       {},
@@ -21,8 +26,8 @@
     ]
   },
   "parserOptions": {
-      "sourceType": "module",
-      "ecmaVersion": 2019
+    "sourceType": "module",
+    "ecmaVersion": 2018
   },
   "settings": {
     "react": {

@@ -1,4 +1,4 @@
-# CW frontend
+# React template
 
 ## AVAILABLE SCRIPTS
 

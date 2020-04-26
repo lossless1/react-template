@@ -5,6 +5,7 @@ import {
 } from 'connected-react-router';
 
 const history = createBrowserHistory();
+
 const routerReducer = connectRouter(history);
 const routerMiddleware = createRouterMiddleware(history);
 

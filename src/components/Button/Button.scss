@@ -1,0 +1,63 @@
+@import 'assets/colors.scss';
+
+button.btn {
+  background-color: $red;
+  color: $white;
+  word-wrap: unset;
+  text-align: center;
+  &.upper_case {
+    text-transform: uppercase;
+  }
+
+  &.btn-default {
+    max-width: 173px;
+    width: 100%;
+    background-color: $gray_2 !important;
+    color: $white !important;
+    text-transform: uppercase;
+    margin-right: 20px;
+    &:disabled {
+      background: $gray_2_o !important;
+    }
+  }
+
+  &.bp3-intent-primary {
+    background-color: $main_blue;
+    color: $white !important;
+    text-transform: uppercase;
+    &.minimal {
+      background-color: transparent !important;
+      color: $main_blue !important;
+      text-transform: inherit;
+      &:hover {
+        background: transparent !important;
+      }
+    }
+    &:hover {
+      background: $main_blue !important;
+    }
+  }
+  &.btn-primary {
+    max-width: 173px;
+    width: 100%;
+    background-color: $main_blue !important;
+    color: $white !important;
+    text-transform: uppercase;
+    &:focus {
+      background: $additional_blue !important;
+    }
+    &:disabled {
+      background: $additional_blue_disabled !important;
+    }
+  }
+  &.btn-danger {
+    max-width: 173px;
+    width: 100%;
+    background-color: $additional_red !important;
+    color: $white !important;
+    text-transform: uppercase;
+    &:disabled {
+      background: $additional_red_disabled !important;
+    }
+  }
+}

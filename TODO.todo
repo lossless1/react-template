@@ -1,1 +1,34 @@
 [] - test test
+
+
+
+/symptoms 
+
+/coughing (0,0.33,0.66,1) => “ratio/percent” (represented as none, medium, .. severe)  
+
+/sore-throat (0,0.33,0.66,1) => “ 
+
+/shortness-of-breath (0,0.33,0.66,1) =>  
+
+/fatigue (0,0.33,0.66,1) =>  
+
+/headache  (0,0.33,0.66,1) =>  
+
+/aches-and-pains  (0,0.33,0.66,1) => 
+
+/loss-of-taste (0,0.33,0.66,1) => 
+
+/swollen-or-red-eyes =>  
+
+/diarrhoea  
+
+/nausea 
+
+/runny-nose 
+
+/body-temperature => “temperature/celsius” / “temperature/Fº” 
+
+
+API to diagnose 
+
+forgotPassword

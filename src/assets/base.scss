@@ -1,6 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
 @import 'colors';
 @import 'mixins';
+@import '~normalize.css';
+@import '~@blueprintjs/core/lib/css/blueprint.css';
+@import '~@blueprintjs/icons/lib/css/blueprint-icons.css';
+@import 'fonts.scss';
+@import 'spinner.scss';
 
 html {
   box-sizing: border-box;
@@ -8,19 +12,17 @@ html {
 }
 html,
 body {
-  height: 100vh;
-
   margin: 0;
   padding: 0;
 
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'DINPro Regular', Fallback, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   font-size: 1rem;
   font-weight: 400;
 
-  color: rgb(0, 0, 0);
+  color: gray;
 
   &.no-vertical-scroll {
     overflow-y: hidden;
@@ -49,12 +51,12 @@ textarea {
   font: inherit;
   margin: 0;
 }
-
+a {
+  color: blue;
+}
 a:link,
 a:visited {
   text-decoration: none;
-
-  color: inherit;
   cursor: pointer;
 }
 
@@ -78,4 +80,8 @@ a:visited {
 
 .hidden {
   display: none !important;
+}
+
+.regular {
+  font-family: 'DINPro Regular', Fallback, sans-serif;
 }

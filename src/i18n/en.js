@@ -1,1 +1,3 @@
-export const translation = {};
+export const translation = {
+  test: 'Test',
+};

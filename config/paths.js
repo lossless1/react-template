@@ -21,6 +21,12 @@ const publicUrlOrPath = getPublicUrlOrPath(
   process.env.PUBLIC_URL
 );
 
+const publicUrlOrPathBuild = getPublicUrlOrPath(
+  process.env.NODE_ENV === 'development',
+  require(resolveApp('package.json')).homepage,
+  process.env.PUBLIC_URL
+);
+
 const moduleFileExtensions = [
   'web.mjs',
   'mjs',
@@ -34,6 +40,9 @@ const moduleFileExtensions = [
   'web.jsx',
   'jsx',
 ];
+
+const authEnv = 'src/index';
+const buildEnv = 'build';
 
 // Resolve file paths in the same order as webpack
 const resolveModule = (resolveFn, filePath) => {
@@ -52,10 +61,10 @@ const resolveModule = (resolveFn, filePath) => {
 module.exports = {
   dotenv: resolveApp('.env'),
   appPath: resolveApp('.'),
-  appBuild: resolveApp('build'),
+  appBuild: resolveApp(buildEnv),
   appPublic: resolveApp('public'),
   appHtml: resolveApp('public/index.html'),
-  appIndexJs: resolveModule(resolveApp, 'src/index'),
+  appIndexJs: resolveModule(resolveApp, authEnv),
   appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),
   appTsConfig: resolveApp('tsconfig.json'),
@@ -65,8 +74,7 @@ module.exports = {
   proxySetup: resolveApp('src/setupProxy.js'),
   appNodeModules: resolveApp('node_modules'),
   publicUrlOrPath,
+  publicUrlOrPathBuild,
 };
-
-
 
 module.exports.moduleFileExtensions = moduleFileExtensions;

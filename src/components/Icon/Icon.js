@@ -1,11 +1,7 @@
-import { ICON_NAMES } from './constants';
 import PropTypes from 'prop-types';
-import { ReactComponent as testIcon } from './icons/test-icon.svg';
-import React from 'react';
 
-const nameToFile = {
-  [ICON_NAMES.TEST_ICON]: testIcon,
-};
+import nameToFile from './files';
+import React from 'react';
 
 const Icon = ({ name, ...props }) => {
   const Icon = nameToFile[name];

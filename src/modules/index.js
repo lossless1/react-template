@@ -1,20 +1,20 @@
-import { createStore, applyMiddleware, compose } from 'redux';
-import createSagaMiddleware from 'redux-saga';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { ConnectedRouter } from 'connected-react-router';
+import { Route } from 'react-router-dom';
+import routes from 'constants/routes';
+import Test from './test/containers/Test/Test';
 
-import { rootReducer } from './rootReducer';
-import { rootSaga } from './rootSaga';
-import { routerMiddleware } from './history';
+import { store } from './store';
+import { history } from './history';
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+import '../i18n';
 
-const sagaMiddleware = createSagaMiddleware();
-
-export const store = createStore(
-  rootReducer,
-  composeEnhancers(
-    applyMiddleware(sagaMiddleware),
-    applyMiddleware(routerMiddleware)
-  )
+export const App = () => (
+  <Provider store={store}>
+    <ConnectedRouter history={history}>
+      <Route path={routes.root} exact component={Test} />
+      <Route path={routes.test} component={Test} />
+    </ConnectedRouter>
+  </Provider>
 );
-
-sagaMiddleware.run(rootSaga);
