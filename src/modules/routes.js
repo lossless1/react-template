@@ -1,6 +1,8 @@
-export const ROOT = '/';
-export const SIGN_IN = '/signin';
-export const GRANT = '/grant';
-export const SIGN_UP = '/signup';
-export const RESET_PASSWORD = '/reset-password';
-export const RESET_PASSWORD_SUCCESS = '/reset-password-success';
+export const ROUTES = {
+  ROOT: '/',
+  SIGN_IN: '/signin',
+  GRANT: '/grant',
+  SIGN_UP: '/signup',
+  RESET_PASSWORD: '/reset-password',
+  RESET_PASSWORD_SUCCESS: '/reset-password-success',
+};
